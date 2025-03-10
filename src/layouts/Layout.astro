@@ -8,9 +8,10 @@
 		<title>elderfieldzeus | ZoosTree</title>
 	</head>
 	<body>
-		<div class="pt-16 py-36 m-auto max-w-[36rem]">
+		<div class="bg"></div>
+		<main class="pt-16 py-36 m-auto max-w-[36rem] relative">
 			<slot/>
-		</div>
+		</main>
 	</body>
 </html>
 
@@ -21,10 +22,18 @@
 		padding: 0 0.3rem;
 		width: 100%;
 		height: 100%;
-		background-image: url("/image.png");
-		background-repeat: no-repeat;
-		background-size: cover;
 		background-color: black;
 		font-family: 'Kanit';
+	}
+	.bg {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-image: url("image.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 0;
 	}
 </style>
