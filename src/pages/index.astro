@@ -1,5 +1,7 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Feature from '../components/Feature.astro'
+import Link from '../components/Link.astro';
+import Profile from '../components/Profile.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +9,31 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<div class="w-full flex flex-col items-center text-center pb-6 text-white">
+		<Profile />
+		<a class="hover:underline underline-offset-4 mt-4 text-xl" href="https://www.linkedin.com/in/elderfieldzeus/" target="_blank">@elderfieldzeus</a>
+		<p class="text-gray-400 text-sm mt-2 font-light">For all business inquiries, email me at 
+			<a class="hover:underline underline-offset-4" href="mailto:zdelderfield.work@gmail.com" target="_blank">zdelderfield.work@gmail.com</a>
+		</p>
+	</div>
+	<div class="flex flex-col gap-4 text-white font-light">
+		<Feature
+			link="https://elderfieldzeus.vercel.app"
+			image="/me_aha.jpeg"
+			c="top-15 -translate-y-1/2"
+			text='Portfolio'
+		
+		/>
+		<Link
+			link="https://linkedin.com/in/elderfieldzeus"
+			icon='linkedin.jpg'
+			text='Zeus Elderfield • LinkedIn'
+		/>
+		<Link
+			link="https://github.com/elderfieldzeus"
+			icon='github.png'
+			text='Zeus D. Elderfield (@elderfieldzeus) • Github'
+		/>
+		
+	</div>
 </Layout>

@@ -1,0 +1,19 @@
+---
+interface Props {
+    link: string;
+    image: string;
+    c: string;
+    text?: string;
+}
+
+const { link, image, c, text } = Astro.props;
+
+---
+
+<a href={link} target="_blank">
+    <div class="aspect-video w-full rounded-md overflow-hidden relative hover:scale-[103%] transition-all">
+        <div class="absolute z-10 w-full h-full top-0 bg-black opacity-30"></div>
+        <img src={ image } class={"absolute " + c} />
+        <p class="absolute z-20 bottom-4 left-4 text-xl text-white">{ text }</p>
+    </div>
+</a>

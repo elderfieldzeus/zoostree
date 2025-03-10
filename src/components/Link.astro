@@ -1,0 +1,24 @@
+---
+import { Icon } from "astro-icon/components"
+
+interface Props {
+    link: string;
+    icon?: string;
+    text?: string;
+}
+
+const { link, icon, text } = Astro.props;
+
+---
+
+<a href={link} target="_blank">
+    <div class="flex gap-2 h-full items-center justify-between w-full bg-gray-950 bg-red z-30 rounded-md p-2 hover:scale-[103%] transition-all">
+        <div class="aspect-square size-13 overflow-hidden flex justify-center items-center rounded-sm">
+            <img src={icon} class="w-full h-full object-cover">
+        </div>
+        <p class="text-center w-2/3">{text}</p>
+        <div class="size-13 flex justify-center items-center cursor-pointer">
+            <Icon class="size-5" name="solar:link-bold" />
+        </div>
+    </div>
+</a>
